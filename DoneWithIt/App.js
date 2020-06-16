@@ -1,13 +1,20 @@
 import React from "react";
-import { StyleSheet, Text, SafeAreaView } from "react-native";
+import { StyleSheet, Text, Image, SafeAreaView } from "react-native";
 
 export default function App() {
-  const handlePress=()=>{
-    console.log("Text clicked")
-  }
   return (
     <SafeAreaView style={styles.container}>
-      <Text numberOfLines={1} onPress={handlePress}>Hello Priyansh Singhal!-A really really long text to check how text works  </Text>
+      <Text numberOfLines={1}>
+        Hello Priyansh Singhal!-A really really long text to check how text
+        works{" "}
+      </Text>
+      <Image
+        source={{
+          width: 200,
+          height: 200,
+          uri: "https://picsum.photos/200/300",
+        }}
+      />
     </SafeAreaView>
   );
 }
@@ -15,6 +22,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0a0",
+    backgroundColor: "#fff",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
