@@ -7,6 +7,6 @@ import ListingDetailsScreen from "./app/components/ListingDetailsScreen";
 
 export default function App() {
   return (
-    <ListingDetailsScreen/>
+    <ViewImageScreen/>
   );
 }
