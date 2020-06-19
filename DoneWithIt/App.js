@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, TextInput, Text } from "react-native";
+import { View, TextInput, Text, Switch } from "react-native";
 import WelcomeScreen from "./app/screens/welcomeScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import Card from "./app/components/Card";
@@ -13,12 +13,11 @@ import ListingsScreen from "./app/screens/ListingsScreen";
 import AppTextInput from "./app/components/AppTextInput";
 
 export default function App() {
-  const [firstName, setFirstName] = useState("");
+  const [isNew, setIsNew] = useState(false);
 
   return (
     <Screen>
-      <Text>{firstName}</Text>
-      <AppTextInput placeholder="Username" icon="email" />
+      <Switch value={isNew} onValueChange={(newValue) => setIsNew(newValue)} />
     </Screen>
   );
 }
