@@ -1,5 +1,5 @@
-import React from "react";
-import { View } from "react-native";
+import React, { useState } from "react";
+import { View, TextInput,Text } from "react-native";
 import WelcomeScreen from "./app/screens/welcomeScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import Card from "./app/components/Card";
@@ -12,9 +12,18 @@ import AccountScreen from "./app/screens/AccountScreen";
 import ListingsScreen from "./app/screens/ListingsScreen";
 
 export default function App() {
+  const [firstName, setFirstName] = useState("");
+
   return (
     <Screen>
-      <ListingsScreen/>
+      <Text>{firstName}</Text>
+      <TextInput
+        maxLength={5}
+        keyboardType="numeric"
+        onChangeText={text=>setFirstName(text)}
+        placeholder="First Name"
+        style={{ borderBottomColor: "#ccc", borderBottomWidth: 1 }}
+      />
     </Screen>
   );
 }
