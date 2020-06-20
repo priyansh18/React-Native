@@ -4,6 +4,7 @@ import Screen from "./../components/Screen";
 import { Formik } from "formik";
 import AppText from "../components/AppText";
 import AppButton from "./../components/AppButton";
+import SubmitButton from './../components/SubmitButton'
 import * as Yup from "yup";
 import ErrorMessage from "../components/ErrorMessage";
 import AppFormField from "./../components/AppFormField";
@@ -22,7 +23,7 @@ function LoginScreen() {
         onSubmit={(values) => console.log(values)}
         validationSchema={validationSchema}
       >
-        {({ handleChange, handleSubmit, errors, setFieldTouched, touched }) => (
+        {() => (
           <>
             <AppFormField
               autoCapitalize="none"
@@ -41,7 +42,7 @@ function LoginScreen() {
               placeholder="Password"
               textContentType="password"
             />
-            <AppButton title="Login" onPress={handleSubmit} />
+            <SubmitButton title="Login"/>
           </>
         )}
       </Formik>
