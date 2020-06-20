@@ -1,19 +1,19 @@
 import React from "react";
 import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
-import AppButton from "./../components/AppButton";
+import AppButton from "../components/AppButton";
 
 function WelcomeScreen(props) {
   return (
     <ImageBackground
-      blurRadius={7}
+      blurRadius={10}
       style={styles.background}
       source={require("../assets/background.jpg")}
     >
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require("../assets/logo-red.png")} />
-        <Text style={styles.tagline}>Sell What you don't need</Text>
+        <Text style={styles.tagline}>Sell What You Don't Need</Text>
       </View>
-      <View style={styles.buttonContainer}>
+      <View style={styles.buttonsContainer}>
         <AppButton title="Login" />
         <AppButton title="Register" color="secondary" />
       </View>
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
     alignItems: "center",
   },
-  buttonContainer: {
+  buttonsContainer: {
     padding: 20,
     width: "100%",
   },
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
   logoContainer: {
     position: "absolute",
-    top: 50,
+    top: 70,
     alignItems: "center",
   },
   tagline: {
